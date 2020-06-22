@@ -58,7 +58,6 @@ public class PokemonAdapter
 
     //Método que agrega información a la lista.
     public void agregarLista(ArrayList<Pokemon> listaPokemon){
-        datapokemon.clear();
         datapokemon.addAll(listaPokemon);
         notifyDataSetChanged();
     }
