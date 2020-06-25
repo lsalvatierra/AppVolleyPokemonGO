@@ -17,6 +17,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
+import idat.edu.pe.appvolleypokemongo.PokemonActivity;
 import idat.edu.pe.appvolleypokemongo.R;
 import idat.edu.pe.appvolleypokemongo.model.Pokemon;
 
@@ -51,7 +52,10 @@ public class PokemonAdapter
         holder.contenedor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intAndroidDetalle =
+                        new Intent(context, PokemonActivity.class);
+                intAndroidDetalle.putExtra("pokemon", pok);
+                context.startActivity(intAndroidDetalle);
             }
         });
     }
